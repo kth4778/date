@@ -6,7 +6,7 @@ import './Home.css'; // 커스텀 스타일
 import SockJS from 'sockjs-client';
 import { Stomp } from '@stomp/stompjs';
 
-const API_URL = 'http://localhost:8080/api';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080/api';
 
 function Home() {
     const location = useLocation();
@@ -30,7 +30,8 @@ function Home() {
             });
 
         // WebSocket connection
-        const socket = new SockJS('http://localhost:8080/ws');
+        const wsUrl = API_URL.replace('/api', '/ws'); // API_URL에서 /api를 /ws로 변경
+        const socket = new SockJS(wsUrl);
         const stompClient = Stomp.over(socket);
 
         stompClient.connect({}, () => {
