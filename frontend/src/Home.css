@@ -1,0 +1,74 @@
+.home-container {
+    padding: 30px;
+    text-align: center;
+}
+
+.calendars-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.calendar-wrapper {
+    width: 400px;
+}
+
+/* react-calendar 커스텀 */
+.react-calendar {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.react-calendar__tile--now {
+    background-color: white !important;
+}
+
+.selected-date {
+    background-color: #ff6f61 !important;
+    color: white !important;
+    border-radius: 50%;
+}
+
+.name-list {
+    font-size: 0.7em;
+    color: #333;
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.submit-button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button {
+    margin-top: 30px;
+    margin-left: 10px; /* 완료 버튼과의 간격 */
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #dc3545; /* 빨간색 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
