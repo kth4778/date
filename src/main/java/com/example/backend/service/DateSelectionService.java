@@ -37,15 +37,15 @@ public class DateSelectionService {
 
     @Transactional // 추가된 부분
     public void deleteSelectionsByUsername(String username) {
-        logger.info("Deleting all selections for username: {}", username);
+//        logger.info("Deleting all selections for username: {}", username);
         repository.deleteByUsername(username);
     }
 
     @Transactional
     public void deleteSelectionByUsernameAndDate(String username, String date) {
-        logger.info("Attempting to delete selection for username: {} and date: {}", username, date);
+//        logger.info("Attempting to delete selection for username: {} and date: {}", username, date);
         repository.deleteByUsernameAndSelectedDate(username, date);
-        logger.info("Deletion attempt completed for username: {} and date: {}", username, date);
+//        logger.info("Deletion attempt completed for username: {} and date: {}", username, date);
     }
 
     public List<String> getAllUsernames() {
