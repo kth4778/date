@@ -60,4 +60,10 @@ public class DateSelectionController {
         messagingTemplate.convertAndSend("/topic/selections", service.getAllSelections());
         return ResponseEntity.ok().build();
     }
+
+    @GetMapping("/health")
+    public String healthCheck() {
+        System.out.println("Health check endpoint accessed!");
+        return "OK";
+    }
 }
