@@ -161,7 +161,7 @@ function Home() {
 
     return (
         <div className="home-container">
-            <h1>{username}님, 여행 날짜를 선택해주세요.</h1>
+            <h1>{username}님, 여행 못가는 날짜를 선택해주세요.</h1>
             <div className="calendars-container">
                 <div className="calendar-wrapper">
                     <h2>7월</h2>
